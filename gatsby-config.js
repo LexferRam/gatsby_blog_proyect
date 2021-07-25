@@ -36,7 +36,7 @@ module.exports = {
       //plugin que permite que se vea la data de un archivo con extension .md y .mdx en graphql
       resolve: `gatsby-plugin-mdx`,
       options:{
-        extensions: [`.md`,`mdx`],
+        extensions: [`.md`,`.mdx`],
         gatsbyRemarkPlugins: [
           {
             //plugin permite que transfrmer sharp interprete la imagenes en graphQL
