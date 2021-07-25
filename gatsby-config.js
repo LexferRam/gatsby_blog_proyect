@@ -15,13 +15,13 @@ module.exports = {
         path: `${__dirname}/src/pages`,
       },
     },
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     name: `posts`,
-    //     path: `${__dirname}/src/posts`,
-    //   },
-    // },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `${__dirname}/src/posts`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -29,14 +29,17 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    //permite
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
+      //plugin que permite que se vea la data de un archivo con extension .md y .mdx en graphql
       resolve: `gatsby-plugin-mdx`,
       options:{
         extensions: [`.md`,`mdx`],
         gatsbyRemarkPlugins: [
           {
+            //plugin permite que transfrmer sharp interprete la imagenes en graphQL
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 1200,
@@ -61,5 +64,15 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `roboto mono`,
+          `muli\:400,400i,700,700i` // you can also specify font weights and styles
+        ],
+        display: 'swap'
+      }
+    }
   ],
 }
