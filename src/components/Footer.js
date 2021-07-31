@@ -23,16 +23,16 @@ export const Footer = () => {
         <FooterWrapper>
             <FooterSocialWrapper>
                 <FooterSocialIcons>
-                    <a href="https://facebook.com" target="_blank">
+                    <a href="https://facebook.com" target="_blank" rel="noreferrer">
                         <img src={data.facebook.publicURL} alt="facebook" />
                     </a>
-                    <a href="https://linkedin.com" target="_blank">
+                    <a href="https://linkedin.com" target="_blank" rel="noreferrer">
                         <img src={data.linkedin.publicURL} alt="linkedin" />
                     </a> 
-                    <a href="https://instagram.com" target="_blank">
+                    <a href="https://instagram.com" target="_blank" rel="noreferrer">
                         <img src={data.instagram.publicURL} alt="instagram" />
                     </a>
-                    <a href="https://twitter.com" target="_blank">
+                    <a href="https://twitter.com" target="_blank" rel="noreferrer">
                         <img src={data.twitter.publicURL} alt="twitter" />
                     </a>
                 </FooterSocialIcons>
