@@ -57,7 +57,7 @@ export const P = styled.p`
         }
     }};
 
-    text-align: ${props => (props.textAlign ? props.textAlign : 'left')}
+    text-align: ${props => (props.textAlign ? props.textAlign : 'left')};
 `
 
 export const H2 = styled.h2`
@@ -82,7 +82,7 @@ export const H2 = styled.h2`
         }};
         font-weight: 400;
         text-align: ${props => (props.textAlign ? props.textAlign : 'left')};
-        margin: ${props => (props => props.margin ? props.margin : 0)}
+        margin: ${props => (props => props.margin ? props.margin : 0)};
 
 `
 

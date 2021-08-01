@@ -5,3 +5,4 @@ export * from "./FeatureImage"
 export * from './Content'
 export * from "./Button"
 export * from './Pagination'
+export * from './Post'

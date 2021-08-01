@@ -8,3 +8,4 @@ export * from "./CardElements"
 export * from "./ContentCard"
 export * from './ButtonElements'
 export * from './PaginationElements'
+export * from './PostElements'

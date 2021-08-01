@@ -29,6 +29,7 @@ exports.createPages = async function({actions, graphql}) {
 
     //creamos un array y recorremos con foraeach ignorando el 1er param(el callback, colocando un _)
     //Array.from() recibe un obj y crea un array con los elementos que recibe
+    //CREA LAS PAGINAS PARA LA PAGINACION DE LOS POST
     Array.from({length:numPages}).forEach((_,i) => {
         actions.createPage({
             path: i === 0 ? `/` : `/${i+1}`,
@@ -41,15 +42,15 @@ exports.createPages = async function({actions, graphql}) {
             }
         })
     })
-    // //create single blogpost
-    // data.allMdx.edges.forEach(edge => {
-    //     const slug = edge.node.frontmatter.slug;
-    //     const id = edge.node.id;
+    //createPage single blogpost
+    data.allMdx.edges.forEach(edge => {
+        const slug = edge.node.frontmatter.slug;
+        const id = edge.node.id;
 
-    //     actions.createPages({
-    //         path:slug,
-    //         component:require.resolve(`./src/templates/singlePosts.js`),
-    //         context:{id}
-    //     })
-    // })
+        actions.createPage({
+            path:slug,
+            component:require.resolve(`./src/templates/singlePosts.js`),
+            context:{id}
+        })
+    })
 } 

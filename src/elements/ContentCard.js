@@ -12,7 +12,7 @@ export const ContentCard = ({date, title, excerpt, slug}) => {
                 {title}
             </H2>
             <P size="small" textAlign="center" margin="0 01.5rem">{excerpt}</P>
-            <Button href={slug}>Read More</Button>
+            <Button href={'/'+slug}>Read More</Button>
         </CardWrapper>
     )
 }
